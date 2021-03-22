@@ -3,8 +3,8 @@
 import datetime
 
 # Datos del usuario
-asistencias = int(input("¿Cuantas asistencias llevas realisadas?"))
-asistenciasMesActual = int(input("¿Cuantas asistencias llevas realisadas este mes?"))
+asistencias = int(input("¿Cuantas asistencias llevas realizadas?"))
+asistenciasMesActual = int(input("¿Cuantas asistencias llevas realizadas este mes?"))
 
 # Fechas
 day = datetime.datetime.now().day   # Hay un problema que se habla mas adelante, cuando el numero del dia es "muy alto"
@@ -23,7 +23,7 @@ def CalculoDeporte():
     dias = 0
 
     for i in months:
-        if month > cont:    # Para llegar al mes que corresponde
+        if month > cont:    # Para llegar al mes que correspondef
             cont += 1
             continue
         elif cont == month:    # Restarle los dias del mes que ya llevamos
