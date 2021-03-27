@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
-import Input from './components/Input.js'
 import Button from './components/Button.js'
+import Card from "./components/Card";
 import Cards from './components/Cards.js'
 
 function App() {
@@ -11,13 +11,16 @@ function App() {
         <h1>Calculadora de Asistencias Deportes UAI</h1>
       </header>
       <body>
-        <div className="container">
-          <Cards/>
-          <h3>¿Cuantas asistencias llevas realizadas?</h3>
-          <Input/>
-          <h3>¿Cuantas asistencias llevas realizadas este mes?</h3>
-          <Input/>
-          <Button/>
+        <div>
+          <div className="input-cards">
+            <Cards/>
+          </div>
+          <div className="boton d-flex justify-content-center">
+            <Button className="col"/>
+          </div>
+          <div className="result-card container">
+            <Card/>
+          </div>
         </div>
       </body>
     </div>

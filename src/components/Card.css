@@ -1,3 +1,7 @@
-.cardcolor {
-    background-color: aquamarine;
+.card {
+    margin-top: 30px;
+}
+
+.card-body {
+    background-color:mintcream;
 }

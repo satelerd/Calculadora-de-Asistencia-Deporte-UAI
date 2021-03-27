@@ -3,7 +3,7 @@ import React from "react";
 function Button() {
     return (
         <div>
-            <button>Calcular</button>
+            <button type="button" class="btn btn-outline-success">Calcular</button>
         </div>
     )
 }

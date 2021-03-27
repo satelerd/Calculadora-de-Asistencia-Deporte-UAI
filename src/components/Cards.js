@@ -1,15 +1,30 @@
-import React from "react";
-import Card from 'react-bootstrap/Card';
-import "./Card.css"
-// import Input from './components/Input.js'
-// import Button from './components/Button.js'
+import React from 'react'
+import Card from './Card'
+import Input from './Input.js'
+
+const cards = [
+    {
+        id: 1,
+        title: "¿Cuantas asistencias llevas realizadas?",
+        body: <Input/>
+    },
+    {
+        id: 2,
+        title: "¿Cuantas asistencias llevas realizadas este mes?",
+        body: <Input/>
+    }
+]
 
 function Cards() {
     return (
-        <div >
-            <Card className="cardcolor">
-                <Card.Body>This is some text within a card body.</Card.Body>
-            </Card>
+        <div className="container d-flex justify-content-center">
+            {
+                cards.map(card => (
+                    <div className="col" key={card.id}>
+                        <Card title={card.title} body={card.body}/>
+                    </div>
+                ))
+            }
         </div>
     )
 }
