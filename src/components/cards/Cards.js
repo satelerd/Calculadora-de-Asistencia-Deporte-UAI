@@ -1,16 +1,17 @@
 import React from 'react'
-import Card from './Card'
-import Input from './Input.js'
+import Card from '../card/Card.js'
+import Input from '../input/Input.js'
+import './Cards.css'
 
 const cards = [
     {
         id: 1,
-        title: "¿Cuantas asistencias llevas realizadas?",
+        title: <h5>¿Cuantas asistencias de deportes llevas este semestre?</h5>,
         body: <Input/>
     },
     {
         id: 2,
-        title: "¿Cuantas asistencias llevas realizadas este mes?",
+        title: <h5>¿Cuantas asistencias de deportes llevas este mes?</h5>,
         body: <Input/>
     }
 ]

@@ -1,8 +1,8 @@
 import React from "react";
 import './App.css';
-import Button from './components/Button.js'
-import Card from "./components/Card";
-import Cards from './components/Cards.js'
+import Button from './components/button/Button.js'
+import Card from "./components/card/Card.js";
+import Cards from './components/cards/Cards.js'
 
 function App() {
   return (
