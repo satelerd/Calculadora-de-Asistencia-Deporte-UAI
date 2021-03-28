@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/main.da0717c0.chunk.css",
-    "main.js": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/main.c10dd7a9.chunk.js",
-    "main.js.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/main.c10dd7a9.chunk.js.map",
+    "main.css": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/main.e45ced19.chunk.css",
+    "main.js": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/main.e7ac7304.chunk.js",
+    "main.js.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/main.e7ac7304.chunk.js.map",
     "runtime-main.js": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/runtime-main.cadd22cc.js",
     "runtime-main.js.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/runtime-main.cadd22cc.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/2.4c97ca4f.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.bf439b7e.chunk.js.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/3.bf439b7e.chunk.js.map",
     "index.html": "/Calculadora-de-Asistencia-Deporte-UAI/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.da0717c0.chunk.css.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/main.da0717c0.chunk.css.map",
+    "static/css/main.e45ced19.chunk.css.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/main.e45ced19.chunk.css.map",
     "static/js/2.a79087b3.chunk.js.LICENSE.txt": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/2.a79087b3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cadd22cc.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.a79087b3.chunk.js",
-    "static/css/main.da0717c0.chunk.css",
-    "static/js/main.c10dd7a9.chunk.js"
+    "static/css/main.e45ced19.chunk.css",
+    "static/js/main.e7ac7304.chunk.js"
   ]
 }
