@@ -25,7 +25,7 @@ function App() {
       </header>
       <body>
         <div>
-          <div className="result-card container">
+          <div className="requisitos-card container">
             <Card title={cards[1].title} body={cards[1].body} />
           </div>
           <div className="input-cards">
@@ -34,7 +34,7 @@ function App() {
           <div className="boton d-flex justify-content-center">
             <Button className="col"/>
           </div>
-          <div className="result-card container">
+          <div className="resultados-card container">
             <Card title={cards[0].title} body={cards[0].body} />
           </div>
           
