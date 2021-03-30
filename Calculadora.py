@@ -13,8 +13,8 @@ months = {"enero": 31 - 10, "febrero": 28 - 8, "marzo": 31 - 8, "abril": 30 - 8,
 
 # Requisitos deportes
 asisteciasTotales = 26
-asistenciasMaxDia = 1
 asistenciasMaxMes = 8
+asistenciasMaxDia = 1
 
 
 def CalculoDeporte():
@@ -23,7 +23,7 @@ def CalculoDeporte():
     dias = 0
 
     for i in months:
-        if month > cont:    # Para llegar al mes que correspondef
+        if month > cont:    # Para llegar al mes que corresponde
             cont += 1
             continue
         elif cont == month:    # Restarle los dias del mes que ya llevamos
@@ -37,7 +37,7 @@ def CalculoDeporte():
             dias += months[i]
 
     mesesSobrantes = len(months) - cont + 1
-    asistenciasPosibles = (mesesSobrantes*8) + (8 - asistenciasMesActual)   # La cantidad de asistencias maximas que puedes hacer tomando en cuenta que solo se contabilizan 8 asistencias al mes
+    asistenciasPosibles = (mesesSobrantes * asistenciasMaxMes) + (asistenciasMaxMes - asistenciasMesActual)   # La cantidad de asistencias maximas que puedes hacer tomando en cuenta que solo se contabilizan 8 asistencias al mes
 
     # Posibles output's
     if asistenciasPosibles >= asistenciasFaltantes:
