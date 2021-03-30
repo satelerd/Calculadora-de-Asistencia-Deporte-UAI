@@ -12,8 +12,8 @@ const cards = [
   },
   {
       id: 2,
-      title: "Requisitos para aprovar deporte",
-      body: "Para aprovar deportes, debes tener un minimo de 26 asistencias en todo el semestre, contabilizando un maximo de 8 asistencias por mes y 1 al día."
+      title: "Requisitos para aprobar deporte",
+      body: "Para aprobar deportes, debes tener un mínimo de 26 asistencias en todo el semestre, contabilizando un máximo de 8 asistencias por mes y 1 al día."
   }
 ]
 
