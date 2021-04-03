@@ -1,23 +1,33 @@
 import React from "react";
 import './App.css';
 import Button from './components/button/Button.js'
+import CalculoDeportes from "./components/calculadora/Calculadora";
 import Card from "./components/card/Card.js";
-import Cards from './components/cards/Cards.js'
+import Cards from "./components/cards/Cards.js"
+
+
+
+var resultado = () => {
+  var textoResultado = CalculoDeportes(6,8);
+  console.log(textoResultado)
+  return textoResultado
+}
 
 const cards = [
   {
       id: 1,
       title: "Resultado",
-      body: "Te quedan X días para hacer X asistencias ... ... ..."
+      body: resultado()
   },
   {
       id: 2,
       title: "Requisitos para aprobar deporte",
-      body: "Para aprobar deportes, debes tener un mínimo de 26 asistencias en todo el semestre, contabilizando un máximo de 8 asistencias por mes y 1 al día."
+      body: "Debes tener un mínimo de 26 asistencias en todo el semestre, contabilizando un máximo de 8 asistencias por mes y 1 al día."
   }
 ]
 
 function App() {
+
   return (
     <div className="App">
       <header>
@@ -32,7 +42,7 @@ function App() {
             <Cards/>
           </div>
           <div className="boton d-flex justify-content-center">
-            <Button className="col"/>
+            <Button onClick={() => {resultado()}}>Calcular</Button>
           </div>
           <div className="resultados-card container">
             <Card title={cards[0].title} body={cards[0].body} />

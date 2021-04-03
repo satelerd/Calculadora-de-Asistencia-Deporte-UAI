@@ -1,21 +1,20 @@
 // Calculadora de asistencias de Deporte
-import "datetime";
 
-// Datos del usuario, input en la pagina
-var asistencias = 8;
-var asistenciasMesActual = 8;
+function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
+    // Datos del usuario, input en la pagina
+    var asistencias = asistenciasInput;
+    var asistenciasMesActual = asistenciasMesActualInput;
 
-// Fechas
- var day = 17; // datetime.datetime.now().day;     // Hay un problema que se habla mas adelante, cuando el numero del dia es "muy alto"
- var month = 6; // datetime.datetime.now().month;
- var months = {"enero": 31 - 10, "febrero": 28 - 8, "marzo": 31 - 8, "abril": 30 - 8, "mayo": 31 - 10, "junio": 30 - 8, "julio": 13 - 4};    // Las restas son los fin de semana (que no cuentan como dia para tomar ramos de deporte)
- 
-// Requisitos deportes
-var asistenciasTotales = 26;
-var asistenciasMaxMes = 8;
-var asistenciasMaxDia = 1;
+    // Fechas
+    const dateTime = new Date()
+    const day = dateTime.getDate();     // Hay un problema que se habla mas adelante, cuando el numero del dia es "muy alto"
+    const month = dateTime.getMonth() + 1;      // datetime.datetime.now().month;
+    var months = {"enero": 31 - 10, "febrero": 28 - 8, "marzo": 31 - 8, "abril": 30 - 8, "mayo": 31 - 10, "junio": 30 - 8, "julio": 13 - 4};    // Las restas son los fin de semana (que no cuentan como dia para tomar ramos de deporte)
+    
+    // Requisitos deportes
+    var asistenciasTotales = 26;
+    var asistenciasMaxMes = 8;
 
-const calculoDeportes = () => {
     var asistenciasFaltantes = asistenciasTotales - asistencias;
     var cont = 1;
     var dias = 0;
@@ -47,7 +46,6 @@ const calculoDeportes = () => {
         // Se suman los dias de los meses que quedan
         else {
             dias = dias + months[element];
-            console.log(dias);
         }
     };
 
@@ -58,12 +56,14 @@ const calculoDeportes = () => {
     
     // Tamo de pana
     if (asistenciasPosibles >= asistenciasFaltantes) {
-        return "Te quedan " + dias + " días hábiles del semestre de deporte, para tomar " + asistenciasFaltantes + " asistencias... Pero dado que solo cuentan 8 asistencias al mes, tienes " + asistenciasPosibles + " asistencias posibles en los " + dias + " días que te quedan."
+        return ("Te quedan " + dias + " días hábiles del semestre de deporte, para tomar " + asistenciasFaltantes + " asistencias... Pero dado que solo cuentan 8 asistencias al mes, tienes " + asistenciasPosibles + " asistencias posibles en los " + dias + " días que te quedan.")
     }
 
     // Efe en el chat
     else {
-        return "Lamento informarte que estas pa la cagada... Necesitas hacer " + asistenciasFaltantes + " asistencias en tan solo " + asistenciasPosibles + " asistencias posibles :("
+        return ("Lamento informarte que estas pa la cagada... Necesitas hacer " + asistenciasFaltantes + " asistencias en tan solo " + asistenciasPosibles + " asistencias posibles :(")
     }
 
 }
+
+export default CalculoDeportes
