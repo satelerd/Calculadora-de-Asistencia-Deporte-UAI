@@ -1,24 +1,20 @@
-import React,  { useState } from 'react'
+import React     from 'react'
 import Card from '../card/Card.js'
 import Input from '../input/Input.js'
 import './Cards.css'
 
 function Cards() {
-    var [asistencias, setAsistencias] = useState(0)
     
     const cards = [
     {
         id: 1,
         title: <h5>¿Cuantas asistencias de deportes llevas este semestre?</h5>,
-        body: <Input onChange={event => {
-            setAsistencias(event.target.value)
-            console.log(asistencias)
-        }} /> // como saco el valor de number desde input hacia aca?
+        body: <Input type="input" /> // como saco el valor de number desde input hacia aca?
     },
     {
         id: 2,
         title: <h5>¿Cuantas asistencias de deportes llevas este mes?</h5>,
-        body: <Input/>
+        body: <Input type="input"/>
     }
 ]
     return (
