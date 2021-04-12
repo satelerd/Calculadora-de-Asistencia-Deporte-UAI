@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/main.a327e97e.chunk.css",
+    "main.css": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/main.6e4a4cf8.chunk.css",
     "main.js": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/main.8c62443e.chunk.js",
     "main.js.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/main.8c62443e.chunk.js.map",
     "runtime-main.js": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/runtime-main.cadd22cc.js",
@@ -12,14 +12,14 @@
     "static/js/3.bf439b7e.chunk.js.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/3.bf439b7e.chunk.js.map",
     "index.html": "/Calculadora-de-Asistencia-Deporte-UAI/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.a327e97e.chunk.css.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/main.a327e97e.chunk.css.map",
+    "static/css/main.6e4a4cf8.chunk.css.map": "/Calculadora-de-Asistencia-Deporte-UAI/static/css/main.6e4a4cf8.chunk.css.map",
     "static/js/2.d79964d9.chunk.js.LICENSE.txt": "/Calculadora-de-Asistencia-Deporte-UAI/static/js/2.d79964d9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cadd22cc.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.d79964d9.chunk.js",
-    "static/css/main.a327e97e.chunk.css",
+    "static/css/main.6e4a4cf8.chunk.css",
     "static/js/main.8c62443e.chunk.js"
   ]
 }
