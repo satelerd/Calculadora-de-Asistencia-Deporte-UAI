@@ -1,6 +1,5 @@
 import React     from 'react'
 import Card from '../card/Card.js'
-import Input from '../input/Input.js'
 import './Cards.css'
 
 function Cards({ info }) {

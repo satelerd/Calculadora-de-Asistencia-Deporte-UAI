@@ -4,7 +4,6 @@ import Button from './components/button/Button.js'
 import CalculoDeportes from "./components/calculadora/Calculadora";
 import Card from "./components/card/Card.js";
 import Cards from "./components/cards/Cards.js"
-import Input from "./components/input/Input"
 
 function App() {
   
