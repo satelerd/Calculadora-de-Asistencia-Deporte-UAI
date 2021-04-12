@@ -1,3 +1,5 @@
+import "./Calculadora.css"
+
 // Calculadora de asistencias de Deporte
 
 function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
@@ -56,7 +58,14 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     
     // Tamo de pana
     if (asistenciasPosibles >= asistenciasFaltantes) {
-        return "Aun tienes tiempo 😅. Te quedan " + asistenciasFaltantes + " asistencias por tomar, en " + asistenciasPosibles + " asistencias posibles, para poder pasar el ramo"
+        return (
+            <div>
+                <p>
+                    Aun tienes tiempo 😅 <br></br>
+                    Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, te quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de este y los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo.
+                </p>
+            </div>
+        )
     }
 
     // Efe en el chat
