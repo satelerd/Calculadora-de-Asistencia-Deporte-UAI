@@ -56,7 +56,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     
     // Tamo de pana
     if (asistenciasPosibles >= asistenciasFaltantes) {
-        return ("Te quedan " + dias + " días hábiles del semestre de deporte, para tomar " + asistenciasFaltantes + " asistencias... Pero dado que solo cuentan 8 asistencias al mes, tienes " + asistenciasPosibles + " asistencias posibles en los " + dias + " días que te quedan.")
+        return "Aun tienes tiempo 😅. Te quedan " + asistenciasFaltantes + " asistencias por tomar, en " + asistenciasPosibles + " asistencias posibles, para poder pasar el ramo"
     }
 
     // Efe en el chat

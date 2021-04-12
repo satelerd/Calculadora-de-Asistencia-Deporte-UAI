@@ -45,7 +45,7 @@ function App() {
       {
           id: 2,
           title: <h4>Requisitos para aprobar deporte</h4>,
-          body: "Debes tener un mínimo de 26 asistencias en todo el semestre, contabilizando un máximo de 8 asistencias por mes y 1 al día."
+          body: "Para aprovar deportes se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. El plazo para cumplir las asistencias es hasta el 13 de julio."
       }
     ]
 
