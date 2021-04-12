@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Input.css';
 
-function Input ({onChange}, type) {
+function Input (type) {
     const [number, setNumber] = useState(0);
 
     // if (type === "input") {
