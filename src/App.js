@@ -7,8 +7,8 @@ import Cards from "./components/cards/Cards.js"
 
 function App() {
   
-  const [inputVal_1, setInputVal_1] = useState(0);
-  const [inputVal_2, setInputVal_2] = useState(0);
+  const [inputVal_1, setInputVal_1] = useState();
+  const [inputVal_2, setInputVal_2] = useState();
 
   const cardsInfo = [
     {
@@ -45,7 +45,7 @@ function App() {
       {
           id: 2,
           title: <h4>Requisitos para aprobar deporte</h4>,
-          body: "Para aprovar deportes se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. El plazo para cumplir las asistencias es hasta el 13 de julio."
+          body: "Para aprobar deportes se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. El plazo para cumplir las asistencias es hasta el 13 de julio."
       }
     ]
 

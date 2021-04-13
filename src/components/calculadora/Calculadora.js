@@ -56,12 +56,36 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
 
     // Posibles output's
     
-    // Tamo de pana
-    if (asistenciasPosibles >= asistenciasFaltantes) {
+    // ERROR Input fuera de rango
+    if ( asistenciasInput > 26 || asistenciasInput < 0 ) {
         return (
             <div>
                 <p>
-                    Aun tienes tiempo 😅 <br></br>
+                    <span>ERROR</span> <br></br> 
+                    Debes ingresar un numero <span>entre 0 y 26</span> en la caja de asistencias <span>este semestre</span>
+                </p>
+            </div>
+        )
+    }
+
+    // ERROR Input fuera de rango
+    else if (asistenciasMesActualInput > 8 || asistenciasMesActualInput < 0) {
+        return (
+            <div>
+                <p>
+                    <span>ERROR</span> <br></br> 
+                    Debes ingresar un numero entre <span>0 y 8</span> en la caja de asistencias <span>este mes</span>
+                </p>
+            </div>
+        )
+    }
+
+    // DE PANA
+    else if (asistenciasPosibles >= asistenciasFaltantes) {
+        return (
+            <div>
+                <p>
+                    Aun tienes tiempo 😅<br></br>
                     Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, te quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de este y los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo.
                 </p>
             </div>
@@ -70,7 +94,15 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
 
     // Efe en el chat
     else {
-        return ("Lamento informarte que estas pa la cagada... Necesitas hacer " + asistenciasFaltantes + " asistencias en tan solo " + asistenciasPosibles + " asistencias posibles :(")
+        return (
+            <div>
+                <p>
+                    Lamento informarte que estas pa la cagada 😬<br></br>
+                    Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, solo quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de este y los próximos {mesesSobrantes} meses... F en el chat<br></br>
+                    Partiste a enviarle un dm a <a href="https://www.instagram.com/uai_deportestgo/">@uai_deportestgo</a>
+                </p>
+            </div>
+        )
     }
 
 }
