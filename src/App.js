@@ -68,7 +68,12 @@ function App() {
         <div className="resultados-card container">
           <Card title={cards[0].title} body={cards[0].body} />
         </div>
-        
+        <div>
+          <h6>
+            Si tienes dudas/ideas me puedes enviar un dm <span>🙌🏼</span><br></br>
+            <a href="https://www.instagram.com/sateler/">@sateler</a>
+          </h6>
+        </div>
       </div>
     </div>
   );

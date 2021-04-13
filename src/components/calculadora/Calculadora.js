@@ -57,7 +57,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     // Posibles output's
     
     // ERROR Input fuera de rango
-    if ( asistenciasInput > 26 || asistenciasInput < 0 ) {
+    if( asistenciasInput > 26 || asistenciasInput < 0 || isNaN(asistenciasInput)) {
         return (
             <div>
                 <p>
@@ -69,12 +69,24 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     }
 
     // ERROR Input fuera de rango
-    else if (asistenciasMesActualInput > 8 || asistenciasMesActualInput < 0) {
+    else if (asistenciasMesActualInput > 8 || asistenciasMesActualInput < 0 || isNaN(asistenciasMesActualInput)) {
         return (
             <div>
                 <p>
                     <span>ERROR</span> <br></br> 
                     Debes ingresar un numero entre <span>0 y 8</span> en la caja de asistencias <span>este mes</span>
+                </p>
+            </div>
+        )
+    }
+
+    // ERROR Input asist mes es mayor a Input asit
+    else if (asistenciasMesActualInput > asistenciasInput) {
+        return (
+            <div>
+                <p>
+                    <span>ERROR</span> <br></br> 
+                    Revisa tus datos, tus <span>asistencias</span> totales <span>debe ser mayor</span> o igual a tus asistencias <span>este mes</span>
                 </p>
             </div>
         )
