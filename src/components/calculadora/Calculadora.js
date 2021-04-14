@@ -62,7 +62,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
             <div>
                 <p>
                     <span>ERROR</span> <br></br> 
-                    Debes ingresar un numero <span>entre 0 y 26</span> en la caja de asistencias <span>este semestre</span>
+                    Debes ingresar un numero <span>entre 0 y 26</span> en la caja de asistencias <span>este semestre</span> (lee los requisitos).
                 </p>
             </div>
         );
@@ -74,7 +74,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
             <div>
                 <p>
                     <span>ERROR</span> <br></br> 
-                    Debes ingresar un numero entre <span>0 y 8</span> en la caja de asistencias <span>este mes</span>
+                    Debes ingresar un numero entre <span>0 y 8</span> en la caja de asistencias <span>este mes</span> (lee los requisitos).
                 </p>
             </div>
         );
@@ -101,7 +101,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
                 <div>
                     <p>
                         ¡¡FELICIDADES!!<br></br>
-                        Ya lograste todas las asistencias necesarias 💪🏽
+                        Ya pasate el ramo 💪🏽
                     </p>
                 </div>
             );
