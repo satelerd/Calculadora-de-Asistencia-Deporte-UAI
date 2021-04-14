@@ -4,8 +4,8 @@ import "./Calculadora.css"
 
 function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     // Datos del usuario, input en la pagina
-    var asistencias = asistenciasInput;
-    var asistenciasMesActual = asistenciasMesActualInput;
+    var asistencias = Number(asistenciasInput);
+    var asistenciasMesActual = Number(asistenciasMesActualInput);
 
     // Fechas
     const dateTime = new Date()
@@ -42,7 +42,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
             else {
                 dias = dias + (months[element] - day);
                 continue;
-            }
+            };
         }
 
         // Se suman los dias de los meses que quedan
@@ -52,12 +52,12 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     };
 
     var mesesSobrantes = Object.keys(months).length - cont + 1;
-    var asistenciasPosibles = (mesesSobrantes * asistenciasMaxMes) + (asistenciasMaxMes - asistenciasMesActual)   // La cantidad de asistencias maximas que puedes hacer tomando en cuenta que solo se contabilizan 8 asistencias al mes
+    var asistenciasPosibles = (mesesSobrantes * asistenciasMaxMes) + (asistenciasMaxMes - asistenciasMesActual);   // La cantidad de asistencias maximas que puedes hacer tomando en cuenta que solo se contabilizan 8 asistencias al mes
 
     // Posibles output's
     
     // ERROR Input fuera de rango
-    if( asistenciasInput > 26 || asistenciasInput < 0 || isNaN(asistenciasInput)) {
+    if( asistencias > 26 || asistencias < 0 || isNaN(asistencias)) {
         return (
             <div>
                 <p>
@@ -65,11 +65,11 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
                     Debes ingresar un numero <span>entre 0 y 26</span> en la caja de asistencias <span>este semestre</span>
                 </p>
             </div>
-        )
+        );
     }
 
     // ERROR Input fuera de rango
-    else if (asistenciasMesActualInput > 8 || asistenciasMesActualInput < 0 || isNaN(asistenciasMesActualInput)) {
+    else if (asistenciasMesActual > 8 || asistenciasMesActual < 0 || isNaN(asistenciasMesActual)) {
         return (
             <div>
                 <p>
@@ -77,11 +77,11 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
                     Debes ingresar un numero entre <span>0 y 8</span> en la caja de asistencias <span>este mes</span>
                 </p>
             </div>
-        )
+        );
     }
 
     // ERROR Input asist mes es mayor a Input asit
-    else if (asistenciasMesActualInput > asistenciasInput) {
+    else if (asistencias < asistenciasMesActual) {
         return (
             <div>
                 <p>
@@ -89,19 +89,44 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
                     Revisa tus datos, tus <span>asistencias</span> totales <span>debe ser mayor</span> o igual a tus asistencias <span>este mes</span>
                 </p>
             </div>
-        )
+        );
     }
 
     // DE PANA
     else if (asistenciasPosibles >= asistenciasFaltantes) {
-        return (
-            <div>
-                <p>
-                    Aun tienes tiempo 😅<br></br>
-                    Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, te quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de este y los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo.
-                </p>
-            </div>
-        )
+
+        // ya completo todas las asistencias
+        if (asistenciasFaltantes === 0) {
+            return (
+                <div>
+                    <p>
+                        ¡¡FELICIDADES!!<br></br>
+                        Ya lograste todas las asistencias necesarias 💪🏽
+                    </p>
+                </div>
+            );
+        } 
+
+        // Si lleva 8 asistencias este mes, entonces no puede hacer mas asistencias este mes
+        else if (asistenciasMesActual === asistenciasMaxMes) {
+            return (
+                <div>
+                    <p>
+                        Aun tienes tiempo 😅<br></br>
+                        Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, te quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo.
+                    </p>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <p>
+                        Aun tienes tiempo 😅<br></br>
+                        Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, te quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de este y los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo.
+                    </p>
+                </div>
+            );
+        };
     }
 
     // Efe en el chat
@@ -114,9 +139,9 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
                     Partiste a enviarle un dm a <a href="https://www.instagram.com/uai_deportestgo/">@uai_deportestgo</a>
                 </p>
             </div>
-        )
-    }
+        );
+    };
 
-}
+};
 
-export default CalculoDeportes
+export default CalculoDeportes;

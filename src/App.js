@@ -70,7 +70,7 @@ function App() {
         </div>
         <div>
           <h6>
-            Si tienes dudas/ideas me puedes enviar un dm <span>🙌🏼</span><br></br>
+            Si tienes dudas/ideas o encuentras un error me puedes enviar un dm <span>🙌🏼</span><br></br>
             <a href="https://www.instagram.com/sateler/">@sateler</a>
           </h6>
         </div>
