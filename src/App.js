@@ -5,6 +5,12 @@ import CalculoDeportes from "./components/calculadora/Calculadora";
 import Card from "./components/card/Card.js";
 import Cards from "./components/cards/Cards.js"
 
+// agruega 1 al contador de visitas
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/visitas");
+xhr.responseType = "json";
+xhr.send();
+
 function App() {
   
   const [inputVal_1, setInputVal_1] = useState();
@@ -34,6 +40,12 @@ function App() {
 
     var resultado = () => {
       setOutputCalculadora(CalculoDeportes(inputVal_1, inputVal_2));
+
+      // Agruega 1 al contador del boton
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/boton");
+      xhr.responseType = "json";
+      xhr.send();
     }
     
     const cards = [
