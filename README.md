@@ -2,4 +2,4 @@
 Este es un proyecto (personal, no oficial ni de tarea/trabajo de la uai) realizado para medir como vaz con la asistencia del semestre de deporte en la UAI.
 
 ### ¿Cuales son los requisitos para aprobar?
-Para aprobar deportes, debes tener un mínimo de 26 asistencias en todo el semestre, contabilizando un máximo de 8 asistencias por mes y 1 al día.
+Para aprobar deportes se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. El plazo para cumplir las asistencias es hasta el 13 de julio.
