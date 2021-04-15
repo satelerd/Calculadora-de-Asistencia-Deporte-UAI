@@ -6,10 +6,10 @@ import Card from "./components/card/Card.js";
 import Cards from "./components/cards/Cards.js"
 
 // agruega 1 al contador de visitas
-// var xhr = new XMLHttpRequest();
-// xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/visitas");
-// xhr.responseType = "json";
-// xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/visitas");
+xhr.responseType = "json";
+xhr.send();
 
 function App() {
   
