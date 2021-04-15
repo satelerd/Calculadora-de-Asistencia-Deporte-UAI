@@ -3,7 +3,6 @@ import Card from '../card/Card.js'
 import './Cards.css'
 
 function Cards({ info }) {
-
     return (
         <div className="container d-flex justify-content-center">
             <div className="col" key={info[0].id}>

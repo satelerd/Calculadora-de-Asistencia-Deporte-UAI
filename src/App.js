@@ -6,10 +6,10 @@ import Card from "./components/card/Card.js";
 import Cards from "./components/cards/Cards.js"
 
 // agruega 1 al contador de visitas
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/visitas");
-xhr.responseType = "json";
-xhr.send();
+// var xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/visitas");
+// xhr.responseType = "json";
+// xhr.send();
 
 function App() {
   
@@ -19,7 +19,7 @@ function App() {
   const cardsInfo = [
     {
         id: 1,
-        title: <h5>¿Cuantas asistencias de deportes llevas este semestre?</h5>,
+        title: <h5>¿Cuantas asistencias de deportes llevas hasta la fecha?</h5>,
         body: (
           <div>
               <input type="number" className="w-50" onChange={ event => setInputVal_1(event.target.value) } />
@@ -31,7 +31,7 @@ function App() {
         title: <h5>¿Cuantas asistencias de deportes llevas este mes?</h5>,
         body: (
           <div>
-              <input type="number" className="w-50" onChange={ event => setInputVal_2(event.target.value) } />
+              <input type="number" className="w-50 mt-6" onChange={ event => setInputVal_2(event.target.value) } />
           </div>
       )
     }];
