@@ -19,7 +19,7 @@ function App() {
   const cardsInfo = [
     {
         id: 1,
-        title: <h5>¿Cuantas asistencias de deportes llevas hasta la fecha?</h5>,
+        title: <h5>¿Cuantas asistencias de deportes llevas en total?</h5>,
         body: (
           <div>
               <input type="number" className="w-50" onChange={ event => setInputVal_1(event.target.value) } />
