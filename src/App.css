@@ -1,26 +1,9 @@
-header {
-  text-align: center;
+.bg {
+  position: fixed;
+  z-index: 0;
 }
 
-.boton {
-  margin-top: 25px;
-}
-
-.resultados-card {
-  margin-bottom: 30px;
-}
-
-h6 {
-  margin: 10px;
-  margin-top: 50px !important;
-  text-align: center;
-  font-size: 15px !important;
-}
-
-span {
-  font-size: 20px;
-}
-
-.mt-6 {
-  margin-top: 0px;
+.tarjetas {
+  position: fixed;
+  z-index: 1;
 }

@@ -62,7 +62,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
             <div>
                 <p>
                     <span>ERROR</span> <br></br> 
-                    Debes ingresar un numero <span>entre 0 y 26</span> en la caja de asistencias <span>este semestre</span> (lee los requisitos).
+                    Debes ingresar un numero <span>entre 0 y 26</span> en la caja de <span>asistencias totales</span> (lee los requisitos).
                 </p>
             </div>
         );
@@ -86,7 +86,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
             <div>
                 <p>
                     <span>ERROR</span> <br></br> 
-                    Revisa tus datos, tus <span>asistencias</span> totales <span>debe ser mayor</span> o igual a tus asistencias <span>este mes</span>
+                    Revisa tus datos, tus <span>asistencias totales</span> <span>debe ser mayor</span> o igual a tus asistencias <span>este mes</span>
                 </p>
             </div>
         );
@@ -134,7 +134,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
         return (
             <div>
                 <p>
-                    Lamento informarte que estas pa la cagada 😬<br></br>
+                    Lamento informarte que estas en problemas 😬<br></br>
                     Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, solo quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de este y los próximos {mesesSobrantes} meses... F en el chat<br></br>
                     Partiste a enviarle un dm a <a href="https://www.instagram.com/uai_deportestgo/">@uai_deportestgo</a>
                 </p>
