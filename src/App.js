@@ -8,6 +8,7 @@ import Cards from "./components/cards/Cards.js"
 // agruega 1 al contador de visitas
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/visitas");
+console.log("visitas", xhr)
 xhr.responseType = "json";
 xhr.send();
 
@@ -44,6 +45,7 @@ function App() {
       // Agruega 1 al contador del boton
       var xhr = new XMLHttpRequest();
       xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/boton");
+      console.log("Boton", xhr)
       xhr.responseType = "json";
       xhr.send();
     }
