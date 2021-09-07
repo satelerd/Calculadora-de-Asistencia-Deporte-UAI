@@ -11,10 +11,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     const dateTime = new Date()
     const day = dateTime.getDate();     // Hay un problema que se habla mas adelante, cuando el numero del dia es "muy alto"
     const month = dateTime.getMonth() + 1;      // datetime.datetime.now().month;
-    var primSem = { "enero": 31 - 10, "febrero": 28 - 8, "marzo": 31 - 8, "abril": 30 - 8, "mayo": 31 - 10, "junio": 30 - 8, "julio": 13 - 4, "agosto": 31 - 8, "septiembre": 30 - 8, "octubre": 31 - 10, "noviembre": 30 - 8, "diciembre": 10 - 2 };    // Las restas son los fin de semana (que no cuentan como dia para tomar ramos de deporte)
-    var segSem = { "agosto": 31 - 8, "septiembre": 30 - 8, "octubre": 31 - 10, "noviembre": 30 - 8, "diciembre": 10 - 2, }  // va del 02 agosto al 10 diciembre
-
-    const months = primSem
+    var months = { "enero": 31 - 10, "febrero": 28 - 8, "marzo": 31 - 8, "abril": 30 - 8, "mayo": 31 - 10, "junio": 30 - 8, "julio": 13 - 4, "agosto": 31 - 8, "septiembre": 30 - 8, "octubre": 31 - 10, "noviembre": 30 - 8, "diciembre": 10 - 2 };    // Las restas son los fin de semana (que no cuentan como dia para tomar ramos de deporte)
 
     // Requisitos deportes
     var asistenciasTotales = 26;
