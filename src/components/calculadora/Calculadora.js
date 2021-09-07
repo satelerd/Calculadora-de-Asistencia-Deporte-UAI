@@ -11,8 +11,11 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     const dateTime = new Date()
     const day = dateTime.getDate();     // Hay un problema que se habla mas adelante, cuando el numero del dia es "muy alto"
     const month = dateTime.getMonth() + 1;      // datetime.datetime.now().month;
-    var months = {"enero": 31 - 10, "febrero": 28 - 8, "marzo": 31 - 8, "abril": 30 - 8, "mayo": 31 - 10, "junio": 30 - 8, "julio": 13 - 4};    // Las restas son los fin de semana (que no cuentan como dia para tomar ramos de deporte)
-    
+    var primSem = { "enero": 31 - 10, "febrero": 28 - 8, "marzo": 31 - 8, "abril": 30 - 8, "mayo": 31 - 10, "junio": 30 - 8, "julio": 13 - 4, "agosto": 31 - 8, "septiembre": 30 - 8, "octubre": 31 - 10, "noviembre": 30 - 8, "diciembre": 10 - 2 };    // Las restas son los fin de semana (que no cuentan como dia para tomar ramos de deporte)
+    var segSem = { "agosto": 31 - 8, "septiembre": 30 - 8, "octubre": 31 - 10, "noviembre": 30 - 8, "diciembre": 10 - 2, }  // va del 02 agosto al 10 diciembre
+
+    const months = primSem
+
     // Requisitos deportes
     var asistenciasTotales = 26;
     var asistenciasMaxMes = 8;
@@ -21,8 +24,9 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     var cont = 1;
     var dias = 0;
 
-    
+
     for (let element of Object.keys(months)) {
+        console.log(month)
 
         // Para llegar al mes que corresponde
         if (month > cont) {
@@ -31,7 +35,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
         }
 
         // Restarle los dias del mes que ya llevamos
-        else if (cont === month) { 
+        else if (cont === month) {
             cont++;
 
             // Si esta resta da negativa, significa que quedan muy pocos dias habiles en ese mes (pero como no puedo poner que dias son los fin de semana, y por tanto los resto de months... qda el cague) y mejor asumir que qdan 0 dias habiles ese mes
@@ -55,13 +59,13 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
     var asistenciasPosibles = (mesesSobrantes * asistenciasMaxMes) + (asistenciasMaxMes - asistenciasMesActual);   // La cantidad de asistencias maximas que puedes hacer tomando en cuenta que solo se contabilizan 8 asistencias al mes
 
     // Posibles output's
-    
+
     // ERROR Input fuera de rango
-    if( asistencias > 26 || asistencias < 0 || isNaN(asistencias)) {
+    if (asistencias > 26 || asistencias < 0 || isNaN(asistencias)) {
         return (
             <div>
                 <p>
-                    <span>ERROR</span> <br></br> 
+                    <span>ERROR</span> <br></br>
                     Debes ingresar un numero <span>entre 0 y 26</span> en la caja de <span>asistencias totales</span> (lee los requisitos).
                 </p>
             </div>
@@ -73,7 +77,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
         return (
             <div>
                 <p>
-                    <span>ERROR</span> <br></br> 
+                    <span>ERROR</span> <br></br>
                     Debes ingresar un numero entre <span>0 y 8</span> en la caja de asistencias <span>este mes</span> (lee los requisitos).
                 </p>
             </div>
@@ -85,7 +89,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
         return (
             <div>
                 <p>
-                    <span>ERROR</span> <br></br> 
+                    <span>ERROR</span> <br></br>
                     Revisa tus datos, tus <span>asistencias totales</span> <span>debe ser mayor</span> o igual a tus asistencias <span>este mes</span>
                 </p>
             </div>
@@ -105,7 +109,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
                     </p>
                 </div>
             );
-        } 
+        }
 
         // Si lleva 8 asistencias este mes, entonces no puede hacer mas asistencias este mes
         else if (asistenciasMesActual === asistenciasMaxMes) {
