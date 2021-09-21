@@ -13,61 +13,61 @@ xhr.responseType = "json";
 xhr.send();
 
 function App() {
-  
+
   const [inputVal_1, setInputVal_1] = useState();
   const [inputVal_2, setInputVal_2] = useState();
 
   const cardsInfo = [
     {
-        id: 1,
-        title: <h5>¿Cuantas asistencias de deportes llevas en total?</h5>,
-        body: (
-          <div>
-              <input type="number" className="w-50" onChange={ event => setInputVal_1(event.target.value) } />
-          </div>
+      id: 1,
+      title: <h5>¿Cuantas asistencias de deportes llevas en total?</h5>,
+      body: (
+        <div>
+          <input type="number" className="w-50" onChange={event => setInputVal_1(event.target.value)} />
+        </div>
       )
     },
     {
-        id: 2,
-        title: <h5>¿Cuantas asistencias de deportes llevas este mes?</h5>,
-        body: (
-          <div>
-              <input type="number" className="w-50 mt-6" onChange={ event => setInputVal_2(event.target.value) } />
-          </div>
+      id: 2,
+      title: <h5>¿Cuantas asistencias de deportes llevas este mes?</h5>,
+      body: (
+        <div>
+          <input type="number" className="w-50 mt-6" onChange={event => setInputVal_2(event.target.value)} />
+        </div>
       )
     }];
 
-    const [outputCalculadora, setOutputCalculadora] = useState();
+  const [outputCalculadora, setOutputCalculadora] = useState();
 
-    var resultado = () => {
-      setOutputCalculadora(CalculoDeportes(inputVal_1, inputVal_2));
+  var resultado = () => {
+    setOutputCalculadora(CalculoDeportes(inputVal_1, inputVal_2));
 
-      // Agruega 1 al contador del boton
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/boton");
-      console.log("Boton", xhr)
-      xhr.responseType = "json";
-      xhr.send();
+    // Agruega 1 al contador del boton
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCalculadora-de-Asistencia-Deporte-UAI/boton");
+    console.log("Boton", xhr)
+    xhr.responseType = "json";
+    xhr.send();
+  }
+
+  const cards = [
+    {
+      id: 1,
+      title: <h4>Resultado</h4>,
+      body: outputCalculadora
+    },
+    {
+      id: 2,
+      title: <h4>Requisitos para aprobar deporte</h4>,
+      body: <div>Para aprobar se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. Puedes encontrar mas información en <a href='https://instagram.com/uai_deportestgo?utm_medium=copy_link' target="_blank" rel="noopener noreferrer">@uai_deportestgo</a>.</div>
     }
-    
-    const cards = [
-      {
-          id: 1,
-          title: <h4>Resultado</h4>,
-          body: outputCalculadora
-      },
-      {
-          id: 2,
-          title: <h4>Requisitos para aprobar deporte</h4>,
-          body: "Para aprobar se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. Puedes encontrar mas información en <a href='https://instagram.com/uai_deportestgo?utm_medium=copy_link'>@uai_deportestgo</a>."
-      }
-    ]
+  ]
 
   return (
     <div className="App">
       <header>
         <h1>Calculadora de Asistencias Deportes UAI</h1>
-      </header>
+      </header>s
 
       <div>
         <div className="requisitos-card container">
@@ -77,7 +77,7 @@ function App() {
           <Cards info={cardsInfo} />
         </div>
         <div className="boton d-flex justify-content-center">
-          <Button onClick={() => {resultado()}}>Calcular</Button>
+          <Button onClick={() => { resultado() }}>Calcular</Button>
         </div>
         <div className="resultados-card container">
           <Card title={cards[0].title} body={cards[0].body} />
@@ -85,7 +85,7 @@ function App() {
         <div>
           <h6>
             Si tienes dudas/ideas o encuentras un error me puedes enviar un dm <span>🙌🏼</span><br></br>
-            <a href="https://www.instagram.com/sateler/">@sateler</a>
+            <a href="https://www.instagram.com/sateler/" target="_blank" rel="noopener noreferrer">@sateler</a>
           </h6>
         </div>
       </div>
