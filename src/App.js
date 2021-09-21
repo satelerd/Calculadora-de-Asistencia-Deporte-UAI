@@ -59,7 +59,7 @@ function App() {
       {
           id: 2,
           title: <h4>Requisitos para aprobar deporte</h4>,
-          body: "Para aprobar deportes se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. El plazo para cumplir las asistencias es hasta el 13 de julio."
+          body: "Para aprobar se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. Puedes encontrar mas información en <a href='https://instagram.com/uai_deportestgo?utm_medium=copy_link'>@uai_deportestgo</a>."
       }
     ]
 
