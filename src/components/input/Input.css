@@ -2,6 +2,11 @@ input {
     margin-bottom: 8px !important;
 }
 
+.input {
+    justify-items: end;
+    align-items: end;
+}
+
 .mt-6 {
     margin-top: 100px !important;
 }

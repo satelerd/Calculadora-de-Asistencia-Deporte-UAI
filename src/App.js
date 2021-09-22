@@ -20,7 +20,7 @@ function App() {
   const cardsInfo = [
     {
       id: 1,
-      title: <h5>¿Cuantas asistencias de deportes llevas en total?</h5>,
+      title: <h5>¿Cuantas asistencias llevas <span className="bold">en total</span>?</h5>,
       body: (
         <div>
           <input type="number" className="w-50" onChange={event => setInputVal_1(event.target.value)} />
@@ -29,7 +29,7 @@ function App() {
     },
     {
       id: 2,
-      title: <h5>¿Cuantas asistencias de deportes llevas este mes?</h5>,
+      title: <h5>¿Cuantas asistencias llevas <span className="bold">este mes</span>?</h5>,
       body: (
         <div>
           <input type="number" className="w-50 mt-6" onChange={event => setInputVal_2(event.target.value)} />
@@ -67,7 +67,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Calculadora de Asistencias Deportes UAI</h1>
-      </header>s
+      </header>
 
       <div>
         <div className="requisitos-card container">
@@ -84,7 +84,7 @@ function App() {
         </div>
         <div>
           <h6>
-            Si tienes dudas/ideas o encuentras un error me puedes enviar un dm <span>🙌🏼</span><br></br>
+            Si tienes dudas/ideas o encuentras un error me puedes enviar un dm <span className="size">🙌🏼</span><br></br>
             <a href="https://www.instagram.com/sateler/" target="_blank" rel="noopener noreferrer">@sateler</a>
           </h6>
         </div>
