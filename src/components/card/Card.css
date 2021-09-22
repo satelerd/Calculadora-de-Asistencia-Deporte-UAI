@@ -16,6 +16,10 @@
     box-shadow: 0px 0px 6px 2px rgb(0,0,0,0.2);
 }
 
+.card-title {
+    margin-bottom: 0px !important;
+}
+
 .card-text {
     display: grid;
     align-items: end;

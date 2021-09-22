@@ -20,7 +20,7 @@ function App() {
   const cardsInfo = [
     {
       id: 1,
-      title: <h5>¿Cuantas asistencias llevas <span className="bold">en total</span>?</h5>,
+      title: <h4>¿Cuantas asistencias llevas <span className="bold">en total</span>?</h4>,
       body: (
         <div>
           <input type="number" className="w-50" onChange={event => setInputVal_1(event.target.value)} />
@@ -29,7 +29,7 @@ function App() {
     },
     {
       id: 2,
-      title: <h5>¿Cuantas asistencias llevas <span className="bold">este mes</span>?</h5>,
+      title: <h4>¿Cuantas asistencias llevas <span className="bold">este mes</span>?</h4>,
       body: (
         <div>
           <input type="number" className="w-50 mt-6" onChange={event => setInputVal_2(event.target.value)} />
@@ -53,13 +53,13 @@ function App() {
   const cards = [
     {
       id: 1,
-      title: <h4>Resultado</h4>,
+      title: <h3>Resultado</h3>,
       body: outputCalculadora
     },
     {
       id: 2,
-      title: <h4>Requisitos para aprobar deporte</h4>,
-      body: <div>Para aprobar se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. Puedes encontrar mas información en <a href='https://instagram.com/uai_deportestgo?utm_medium=copy_link' target="_blank" rel="noopener noreferrer">@uai_deportestgo</a>.</div>
+      title: <h3>Requisitos para aprobar deporte</h3>,
+      body: <p>Para aprobar se necesitan cumplir con 26 asistencias, contabilizando solo 1 asistencia diaria y 8 asistencias por mes. Puedes encontrar mas información en <a href='https://instagram.com/uai_deportestgo?utm_medium=copy_link' target="_blank" rel="noopener noreferrer">@uai_deportestgo</a>.</p>
     }
   ]
 

@@ -10,11 +10,28 @@ header {
   margin-bottom: 30px;
 }
 
+h1 {
+  font-size: clamp(40px, 4vw, 56px) !important;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+h3 {
+  font-size: clamp(28px, 4vw, 35px) !important;
+}
+h4 {
+  font-size: clamp(20px, 4vw, 24px) !important;
+}
+h5 {
+  margin:0 !important;
+}
 h6 {
   margin: 10px;
   margin-top: 50px !important;
   text-align: center;
   font-size: 15px !important;
+}
+p {
+  font-size: clamp(16px, 4vw, 20px) !important;
 }
 
 .size {
