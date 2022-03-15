@@ -52,7 +52,13 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
         }
     };
 
-    var mesesSobrantes = Object.keys(months).length - cont + 1;
+    // si el mes actual es menor a junio, entonces estamos en el primer semestre
+    if (month <= 6) {
+        var mesFinal = 6;
+    } else {
+        var mesFinal = 12;
+    }
+    var mesesSobrantes = mesFinal - cont + 1;
     var asistenciasPosibles = (mesesSobrantes * asistenciasMaxMes) + (asistenciasMaxMes - asistenciasMesActual);   // La cantidad de asistencias maximas que puedes hacer tomando en cuenta que solo se contabilizan 8 asistencias al mes
 
     // Posibles output's
@@ -114,7 +120,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
                 <div>
                     <p>
                         Aun tienes tiempo 😅<br></br>
-                        Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, te quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo.
+                        Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, existen <span>{asistenciasPosibles} posibles asistencias</span> dentro de los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo este semestre.
                     </p>
                 </div>
             );
@@ -123,7 +129,7 @@ function CalculoDeportes(asistenciasInput, asistenciasMesActualInput) {
                 <div>
                     <p>
                         Aun tienes tiempo 😅<br></br>
-                        Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, te quedan <span>{asistenciasPosibles} posibles asistencias</span> dentro de este y los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo.
+                        Debes tomar <span>{asistenciasFaltantes} asistencias</span>, y según los requisitos, existen <span>{asistenciasPosibles} posibles asistencias</span> dentro de este y los próximos {mesesSobrantes} meses que quedan para poder pasar el ramo este semestre.
                     </p>
                 </div>
             );
